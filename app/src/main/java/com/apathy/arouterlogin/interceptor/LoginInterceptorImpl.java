@@ -50,7 +50,7 @@ public class LoginInterceptorImpl implements IInterceptor {
 
     @Override
     public void init(Context context) {
-        LogUtils.v("路由登录拦截器初始化成功");
+        LogUtils.v("路由登录拦截器初始化成功"); //只会走一次
     }
 
 }

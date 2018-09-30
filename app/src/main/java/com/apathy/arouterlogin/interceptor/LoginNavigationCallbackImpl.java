@@ -21,35 +21,30 @@ import com.blankj.utilcode.util.LogUtils;
  */
 
 public class LoginNavigationCallbackImpl  implements NavigationCallback{
-    @Override
+    @Override //找到了
     public void onFound(Postcard postcard) {
-        //找到了
+
     }
 
-    @Override
+    @Override //找不到了
     public void onLost(Postcard postcard) {
-        //找不到了
+
     }
 
-    @Override
+    @Override    //跳转成功了
     public void onArrival(Postcard postcard) {
-        //跳转成功了
-        LogUtils.v("跳转成功了");
+
     }
 
     @Override
     public void onInterrupt(Postcard postcard) {
         String path = postcard.getPath();
-
         LogUtils.v(path);
         Bundle bundle = postcard.getExtras();
-
-
         // 拦截了
         ARouter.getInstance().build(ConfigConstants.LOGIN_PATH)
                 .with(bundle)
                 .withString(ConfigConstants.PATH, path)
                 .navigation();
-
     }
 }

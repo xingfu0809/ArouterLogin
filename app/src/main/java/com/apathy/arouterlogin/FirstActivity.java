@@ -21,12 +21,8 @@ public class FirstActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        initView();
+        tvMsg = findViewById(R.id.tv_msg);
         tvMsg.setText(msg);
 
-    }
-
-    private void initView() {
-        tvMsg = findViewById(R.id.tv_msg);
     }
 }
